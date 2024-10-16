@@ -69,7 +69,7 @@ I have the following recommendations based on my findings;
 
 ## Code
 
-For the rest of the code, check the [Data Cleaning & Standardization](https://github.com/boluwatifeore/INC5000-Data-Cleaning---Exploratory-Analysis/blob/main/Data%20Cleaning%20%26%20Standardization%20INC_5000.sql) file
+For the rest of the code, check the [Data Cleaning & Standardization] [Exploratory Data ANalysis](https://github.com/boluwatifeore/INC5000-Data-Cleaning---Exploratory-Analysis/blob/main/Data%20Cleaning%20%26%20Standardization%20INC_5000.sql) (https://github.com/boluwatifeore/INC5000-Data-Cleaning---Exploratory-Analysis/blob/main/INC%20Exploratory%20Data%20Analysis.sql) file
 
 ```sql
 -- Create Database
