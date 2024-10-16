@@ -69,7 +69,7 @@ I have the following recommendations based on my findings;
 
 ## Code
 
-For the rest of the code, check the [SQL_queries.sql](https://github.com/Princekrampah/WalmartSalesAnalysis/blob/master/SQL_queries.sql) file
+For the rest of the code, check the [Data Cleaning & Standardization]([https://github.com/Princekrampah/WalmartSalesAnalysis/blob/master/SQL_queries.sql](https://github.com/boluwatifeore/INC5000-Data-Cleaning---Exploratory-Analysis/blob/main/Data%20Cleaning%20%26%20Standardization%20INC_5000.sql)) file
 
 ```sql
 -- Create Database
