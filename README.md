@@ -69,7 +69,10 @@ I have the following recommendations based on my findings;
 
 ## Code
 
-For the rest of the code, check the [Data Cleaning & Standardization] [Exploratory Data ANalysis](https://github.com/boluwatifeore/INC5000-Data-Cleaning---Exploratory-Analysis/blob/main/Data%20Cleaning%20%26%20Standardization%20INC_5000.sql) (https://github.com/boluwatifeore/INC5000-Data-Cleaning---Exploratory-Analysis/blob/main/INC%20Exploratory%20Data%20Analysis.sql) file
+For the rest of the code, check the [INC Exploratory Data Analysis](https://github.com/boluwatifeore/INC5000-Data-Cleaning---Exploratory-Analysis/blob/main/Data%20Cleaning%20%26%20Standardization%20INC_5000.sql) file
+
+For the Data Cleaning & Standardization codes, check the [Data Cleaning & Standardization](https://github.com/boluwatifeore/INC5000-Data-Cleaning---Exploratory-Analysis/blob/main/Data%20Cleaning%20%26%20Standardization%20INC_5000.sql) file
+
 
 ```sql
 -- Create Database
@@ -91,3 +94,5 @@ CREATE TABLE IF NOT EXISTS inc_5000(
     city VARCHAR(50) NOT NULL
 );
 ```
+
+Thank you for taking your time to read through!
