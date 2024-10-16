@@ -12,128 +12,82 @@ This project aims to uncover insights about the fastest-growing private companie
 The major aim of this project is to identify trends and insights about the growth, revenue, and workforce of the fastest-growing private companies in the United States. 
 
 
-### Analysis List
-
-1. Product Analysis
-
-> Conduct analysis on the data to understand the different product lines, the products lines performing best and the product lines that need to be improved.
-
-2. Sales Analysis
-
-> This analysis aims to answer the question of the sales trends of product. The result of this can help use measure the effectiveness of each sales strategy the business applies and what modificatoins are needed to gain more sales.
-
-3. Customer Analysis
-
-> This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
-
 ## Approach Used
 
-1. **Data Cleaning:** This is the first step where inspection of data is done to make sure **NULL** values and missing values are detected and data replacement methods are used to replace, missing or **NULL** values.
+1. **Data Cleaning:** 
+
+- Check for and Remove all Duplicates
+- Check for and Fix every Null Values and Blank Fields
+- Standardize the whole Data
 
 2. **Exploratory Data Analysis (EDA):** Exploratory data analysis is done to answer the listed questions and aims of this project.
 
-3. **Conclusion:**
+1. How many industries are in INC5000?
+2. What are the various unique industries in INC5000?
+3. Which industries are most and least represented in the list?
+4. Which industries saw the largest average growth rate?
+5. What's the average revenue among companies on the list? Broken down by industry?
+6. Are companies that were founded early making more revenue than those founded more recently?
+7. Is high number of workers a key factor to generating more revenue?
+8. What is the top ten city with the most revenue and what companies are based in these cities?
+9. What are the top 10 companies with the largest increase in staff/new hires?
+10. What is the average revenue per employee for each industry?
 
-## Business Questions To Answer
+## Findings
 
-### Generic Question
+I discovered the following insights based on the questions asked;
 
-1. How many unique cities does the data have?
-2. In which city is each branch?
+- The most represented industry is Business Products & Services with 491 companies, while Computer Hardware is the least represented with only 32 companies.
 
-### Product
-
-1. How many unique product lines does the data have?
-2. What is the most common payment method?
-3. What is the most selling product line?
-4. What is the total revenue by month?
-5. What month had the largest COGS?
-6. What product line had the largest revenue?
-5. What is the city with the largest revenue?
-6. What product line had the largest VAT?
-7. Fetch each product line and add a column to those product line showing "Good", "Bad". Good if its greater than average sales
-8. Which branch sold more products than average product sold?
-9. What is the most common product line by gender?
-12. What is the average rating of each product line?
-
-### Sales
-
-1. Number of sales made in each time of the day per weekday
-2. Which of the customer types brings the most revenue?
-3. Which city has the largest tax percent/ VAT (**Value Added Tax**)?
-4. Which customer type pays the most in VAT?
-
-### Customer
-
-1. How many unique customer types does the data have?
-2. How many unique payment methods does the data have?
-3. What is the most common customer type?
-4. Which customer type buys the most?
-5. What is the gender of most of the customers?
-6. What is the gender distribution per branch?
-7. Which time of the day do customers give most ratings?
-8. Which time of the day do customers give most ratings per branch?
-9. Which day fo the week has the best avg ratings?
-10. Which day of the week has the best average ratings per branch?
+- Logistics & Transportation leads with an average growth rate of 717.55%, while IT Services has the lowest at 70.58%.
+  
+- Security companies have the highest average revenue at $126.7 million, closely followed by Health with $107.6 million while Advertising & Marketing and Media with the lowest average revenue of $18.9 million and $16.7 million respectively.
+  
+- Companies founded recently have the lowest average revenue ($32.6 million), while older companies (e.g., After Early Founded and Early Founded) with the average revenue of $170.8 million and $167.8 million respectively.
+  
+- Majority of the companies(4984 of 5000) have workers between 1 and 10,000, with an average revenue of $43.5 million. However, the only one company with the highest revenue of $6 billion has the highest number of workers too of over 140,000 workers.
+  
+- The city of Eagan, MN tops with $21 billion from Prime Therapeutics, followed by San Francisco, CA with $11 billion from Uber Technologies, and other companies in cities of Santa Ana, CA, Tampa, FL, Reston, VA, Dania Beach, Cincinnati, OH, Eighty Four, PA, McKinney, TX, Raleigh, NC.
+  
+- Allied Universal had the largest staff increase, going from 36,469 to 155,000, adding 118,531 employees.
+  
+- Computer Hardware industry has the highest average revenue per employee at $615,385, while the Security industry has the lowest at $50,839.
 
 
-## Revenue And Profit Calculations
+## Recommendations
 
-$ COGS = unitsPrice * quantity $
+I have the following recommendations based on my findings;
 
-$ VAT = 5\% * COGS $
+- Companies in the Logistics & Transportation and Consumer Products & Services sectors showed the largest average growth rates. Organizations should consider investing in these industries for potential growth opportunities.
 
-$VAT$ is added to the $COGS$ and this is what is billed to the customer.
+- Industries like Computer Hardware and Security, despite having high revenue per employee, show room for improvement in workforce efficiency. Companies could explore training and development programs to promote productivity among employees in industries as such.
 
-$ total(gross_sales) = VAT + COGS $
+- The cities with the highest revenues, such as Eagan, MN, and San Francisco, CA, offer lucrative markets. Companies should consider strategic location decisions and market expansions to capitalize on these areas with high revenue.
 
-$ grossProfit(grossIncome) = total(gross_sales) - COGS $
+- Companies with significant increases in staffing, like Allied Universal, illustrate the benefits of expanding workforce capabilities. Organizations should invest in hiring and training programs to support growth and improve service offerings.
 
-**Gross Margin** is gross profit expressed in percentage of the total(gross profit/revenue)
-
-$ \text{Gross Margin} = \frac{\text{gross income}}{\text{total revenue}} $
-
-<u>**Example with the first row in our DB:**</u>
-
-**Data given:**
-
-- $ \text{Unite Price} = 45.79 $
-- $ \text{Quantity} = 7 $
-
-$ COGS = 45.79 * 7 = 320.53 $
-
-$ \text{VAT} = 5\% * COGS\\= 5\%  320.53 = 16.0265 $
-
-$ total = VAT + COGS\\= 16.0265 + 320.53 = $336.5565$
-
-$ \text{Gross Margin Percentage} = \frac{\text{gross income}}{\text{total revenue}}\\=\frac{16.0265}{336.5565} = 0.047619\\\approx 4.7619\% $
 
 ## Code
 
 For the rest of the code, check the [SQL_queries.sql](https://github.com/Princekrampah/WalmartSalesAnalysis/blob/master/SQL_queries.sql) file
 
 ```sql
--- Create database
-CREATE DATABASE IF NOT EXISTS walmartSales;
+-- Create Database
+CREATE DATABASE IF NOT EXISTS inc_5000_companies;
 
--- Create table
-CREATE TABLE IF NOT EXISTS sales(
-	invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
-    branch VARCHAR(5) NOT NULL,
-    city VARCHAR(30) NOT NULL,
-    customer_type VARCHAR(30) NOT NULL,
-    gender VARCHAR(30) NOT NULL,
-    product_line VARCHAR(100) NOT NULL,
-    unit_price DECIMAL(10,2) NOT NULL,
-    quantity INT NOT NULL,
-    tax_pct FLOAT(6,4) NOT NULL,
-    total DECIMAL(12, 4) NOT NULL,
-    date DATETIME NOT NULL,
-    time TIME NOT NULL,
-    payment VARCHAR(15) NOT NULL,
-    cogs DECIMAL(10,2) NOT NULL,
-    gross_margin_pct FLOAT(11,9),
-    gross_income DECIMAL(12, 4),
-    rating FLOAT(2, 1)
+-- Create Table
+CREATE TABLE IF NOT EXISTS inc_5000(
+	rank_id INT NOT NULL PRIMARY KEY,
+    name NVARCHAR(100) NOT NULL,
+    state CHAR(3) NOT NULL,
+    revenue NCHAR(30) NOT NULL,
+    growth INT NOT NULL,
+    industry VARCHAR(50) NOT NULL,
+    workers INT NOT NULL,
+    previous_workers INT NOT NULL,
+    founded INT NOT NULL,
+    years_on_list INT NOT NULL,
+    metro VARCHAR(50) NOT NULL,
+    city VARCHAR(50) NOT NULL
 );
 ```
